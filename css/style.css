@@ -1,0 +1,374 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0d1117;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   ROOT COLOR
+========================= */
+
+:root{
+
+    --bg:#0d1117;
+    --sidebar:#161b22;
+    --card:#1f2633;
+    --border:#2b3442;
+
+    --gold:#f5b700;
+    --green:#22c55e;
+    --red:#ef4444;
+    --blue:#3b82f6;
+    --text:#ffffff;
+    --text2:#9ca3af;
+
+    --shadow:0 15px 35px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0d1117;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ffd54a;
+
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+
+    width:250px;
+    height:100vh;
+
+    background:var(--sidebar);
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    border-right:1px solid var(--border);
+
+    padding:30px;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:50px;
+
+}
+
+.logo i{
+
+    color:var(--gold);
+    font-size:28px;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    padding:15px 18px;
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:var(--text2);
+
+}
+
+.sidebar li:hover{
+
+    background:rgba(245,183,0,.15);
+
+    color:white;
+
+}
+
+.sidebar .active{
+
+    background:var(--gold);
+
+    color:black;
+
+    font-weight:600;
+
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+
+    margin-left:250px;
+
+    padding:35px;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:32px;
+    font-weight:700;
+
+}
+
+.profile{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    border:1px solid var(--border);
+
+}
+
+.profile i{
+
+    font-size:22px;
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    background:var(--gold);
+
+    color:black;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#1f2633;
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =========================
+   CHART BOX
+========================= */
+
+.chart-box{
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    padding:25px;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    width:80px;
+
+}
+
+.logo h2{
+
+    display:none;
+
+}
+
+.sidebar li{
+
+    text-align:center;
+
+}
+
+.sidebar li i{
+
+    margin-right:0;
+
+}
+
+.main{
+
+    margin-left:80px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.main{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+.sidebar{
+
+    display:none;
+
+}
+
+header h1{
+
+    font-size:24px;
+
+}
+
+}
