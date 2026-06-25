@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trading Journal | Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-chart-line"></i>
+        <h2>Trade Journal</h2>
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+        <li onclick="location.href='journal.html'">
+            <i class="fa-solid fa-book"></i>
+            Journal
+        </li>
+
+        <li onclick="location.href='statistics.html'">
+            <i class="fa-solid fa-chart-column"></i>
+            Statistics
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Dashboard</h1>
+
+<div class="profile">
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+</header>
+
+<section class="cards">
+
+<div class="card">
+<h3>Total Trade</h3>
+<h2 id="totalTrade">0</h2>
+</div>
+
+<div class="card">
+<h3>Win Rate</h3>
+<h2 id="winRate">0%</h2>
+</div>
+
+<div class="card">
+<h3>Total Profit</h3>
+<h2 id="profit">$0</h2>
+</div>
+
+<div class="card">
+<h3>Average RR</h3>
+<h2 id="rr">0</h2>
+</div>
+
+</section>
+
+<section class="chart-area">
+
+<div class="chart-box">
+
+<h3>Equity Curve</h3>
+
+<canvas id="equityChart"></canvas>
+
+</div>
+
+<div class="chart-box">
+
+<h3>Profit Bulanan</h3>
+
+<canvas id="monthlyChart"></canvas>
+
+</div>
+
+</section>
+
+<section class="recent">
+
+<div class="recent-header">
+
+<h2>Recent Trade</h2>
+
+<button onclick="location.href='journal.html'">
+
+Tambah Trade
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tanggal</th>
+
+<th>Pair</th>
+
+<th>Type</th>
+
+<th>Profit</th>
+
+<th>RR</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recentTrade">
+
+<tr>
+
+<td colspan="6">
+
+Belum ada data
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
